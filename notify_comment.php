@@ -6,12 +6,11 @@ function wpd_comment_notification_text( $notify_message, $comment_id ){
     $post = get_post( $comment->comment_post_ID );
     // não modifica trackbacks ou pingbacks
     if( '' == $comment->comment_type ){
-        // build the new message text
+        //construtor do novo texto
         $notify_message  = sprintf( __( 'New comment on your post "%s"' ), $post->post_title ) . "\r\n";
-        $notify_message .= sprintf( __('Author : %1$s (IP: %2$s , %3$s)'), $comment->comment_author, $comment->comment_author_IP, $comment_author_domain ) . "\r\n";
+        $notify_message .= sprintf( __('Author : %1$s'), $comment->comment_author ) . "\r\n";
         $notify_message .= sprintf( __('E-mail : %s'), $comment->comment_author_email ) . "\r\n";
         $notify_message .= sprintf( __('URL    : %s'), $comment->comment_author_url ) . "\r\n";
-        $notify_message .= sprintf( __('Whois  : http://whois.arin.net/rest/ip/%s'), $comment->comment_author_IP ) . "\r\n";
         $notify_message .= __('Comment: ') . "\r\n" . $comment->comment_content . "\r\n\r\n";
         $notify_message .= __('You can see all comments on this post here: ') . "\r\n";
         $notify_message .= get_permalink($comment->comment_post_ID) . "#comments\r\n\r\n";
