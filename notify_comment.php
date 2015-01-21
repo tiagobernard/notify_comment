@@ -29,5 +29,4 @@ function wpd_comment_notification_text( $notify_message, $comment_id ){
 }
 
 add_filter( 'comment_notification_text', 'wpd_comment_notification_text', 20, 2 );
-
 ?>
