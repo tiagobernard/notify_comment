@@ -1,2 +1,4 @@
-# notify_comment
-Customizando a notificação de novo comentário no wordpress
+custom-notify-comment
+==========
+
+Customizando as notificações de novos comentários no WordPress
